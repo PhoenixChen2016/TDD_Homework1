@@ -88,7 +88,7 @@ namespace PagingGroup.Tests
 			var sut = new PagingGroup();
 
 			var testData = GetOrders();
-			var fieldName = "Cost";
+			var fieldName = nameof(Order.Cost); //"Cost";
 			var pagingCount = 3;
 
 			// act
@@ -107,7 +107,7 @@ namespace PagingGroup.Tests
 			var sut = new PagingGroup();
 
 			var testData = GetOrders();
-			var fieldName = "Revence";
+			var fieldName = nameof(Order.Revence); // "Revence";
 			var pagingCount = 4;
 
 			// act
