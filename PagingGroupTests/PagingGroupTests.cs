@@ -107,7 +107,7 @@ namespace PagingGroup.Tests
 			var sut = new PagingGroup();
 
 			var testData = GetTestData();
-			var fieldName = "Revenue";
+			var fieldName = "Revence";
 			var pagingCount = 4;
 
 			// act
