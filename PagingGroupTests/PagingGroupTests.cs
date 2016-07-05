@@ -81,42 +81,42 @@ namespace PagingGroup.Tests
 			}
 		};
 
-        [TestMethod()]
-        public void GroupingFieldValuesTest_輸入欄位名稱Cost_3筆一組會得到結果6_15_24_21()
-        {
-            // arrange
-            var sut = new PagingGroup();
+		[TestMethod()]
+		public void GroupingFieldValuesTest_輸入欄位名稱Cost_3筆一組會得到結果6_15_24_21()
+		{
+			// arrange
+			var sut = new PagingGroup();
 
 			var testData = GetOrders();
-			var fieldName = nameof(Order.Cost); //"Cost";
+			Func<Order, int> field = x => x.Cost;
 			var pagingCount = 3;
 
-            // act
-            var actual = sut.GroupingFieldValues(testData, fieldName, pagingCount);
+			// act
+			var actual = sut.GroupingFieldValues(testData, field, pagingCount);
 
-            // assert
-            var expected = new[] { 6, 15, 24, 21 };
+			// assert
+			var expected = new[] { 6, 15, 24, 21 };
 
-            expected.ToExpectedObject().ShouldEqual(actual);
-        }
+			expected.ToExpectedObject().ShouldEqual(actual);
+		}
 
-        [TestMethod()]
-        public void GroupingFieldValuesTest_輸入欄位名稱Revenue_4筆一組會得到結果50_66_60()
-        {
-            // arrange
-            var sut = new PagingGroup();
+		[TestMethod()]
+		public void GroupingFieldValuesTest_輸入欄位名稱Revenue_4筆一組會得到結果50_66_60()
+		{
+			// arrange
+			var sut = new PagingGroup();
 
 			var testData = GetOrders();
-			var fieldName = nameof(Order.Revence); // "Revence";
+			Func<Order, int> field = x => x.Revence;
 			var pagingCount = 4;
 
-            // act
-            var actual = sut.GroupingFieldValues(testData, fieldName, pagingCount);
+			// act
+			var actual = sut.GroupingFieldValues(testData, field, pagingCount);
 
-            // assert
-            var expected = new[] { 50, 66, 60 };
+			// assert
+			var expected = new[] { 50, 66, 60 };
 
-            expected.ToExpectedObject().ShouldEqual(actual);
-        }
-    }
+			expected.ToExpectedObject().ShouldEqual(actual);
+		}
+	}
 }
