@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/PagingGroupSite/TypeScripts/**.js.map
+/PagingGroupSite/TypeScripts/**.js
+/PagingGroupSite/typings
