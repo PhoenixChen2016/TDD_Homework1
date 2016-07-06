@@ -104,7 +104,7 @@
 
 		var testData = orders;
 		var fieldName = "Revence";
-		var pagingCount = 3;
+		var pagingCount = 4;
 
 		// act
 		var actual = sut.GroupingFieldValues(testData, fieldName, pagingCount);

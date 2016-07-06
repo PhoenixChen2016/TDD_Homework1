@@ -1,0 +1,17 @@
+﻿{
+	"Framework": "jasmine",
+	"References": [
+		{
+			"Path": "TypeScripts",
+			"Includes": [ "*.js" ],
+			"Excludes": [ "*/Tests/*.js" ]
+		}
+	],
+	"Tests": [
+		{
+			"Path": "TypeScripts/Tests",
+			"Includes": [ "*.js" ],
+			"Excludes": [ "*.html" ]
+		}
+	]
+}

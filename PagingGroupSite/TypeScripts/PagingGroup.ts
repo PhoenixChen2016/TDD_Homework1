@@ -2,9 +2,19 @@
 {
 	export class PagingGroup
 	{
-		public GroupingFieldValues(testData, fieldName, pagingCount): number[]
+		public GroupingFieldValues<T>(testData: T[], fieldName: string, pagingCount: number): number[]
 		{
-			return null;
+			var result = [];
+			testData.forEach((v, i) =>
+			{
+				var idx = Math.floor(i / pagingCount);
+				if (result[idx] == null)
+					result[idx] = 0;
+
+				result[idx] += v[fieldName];
+			});
+
+			return result;
 		}
 	}
 }
